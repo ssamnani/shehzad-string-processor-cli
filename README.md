@@ -3,7 +3,7 @@
 ## Overview
 This CLI tool performs string convertion to 
 1. Uppercase
-2. Alternate case (starting first letter with lowercasa)
+2. Alternate case (starting first letter with lowercase)
 3. Comma separated letters of string written to a CSV file named output.txt
 4. String without change - basic string processor - it demostrates extensibility of design
 
