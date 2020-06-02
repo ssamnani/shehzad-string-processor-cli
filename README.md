@@ -25,5 +25,5 @@ Technical assessment display
 8. `composer require "ssamnani/shehzad-string-processor-lib:~1.3.0"`
 
 ## Usage
-1. php commander.php
+1. `php commander.php`
 2. Ready to go! Type any phrase to convert the strings; type quit to exit.
