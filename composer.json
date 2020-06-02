@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "ssamnani/shehzad-string-processor-lib": "~1.1.0",
+        "ssamnani/shehzad-string-processor-lib": "~1.2.0",
         "clue/stdio-react": "^2.3"
     },
     "repositories": {

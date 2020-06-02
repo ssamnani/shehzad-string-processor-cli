@@ -6,11 +6,18 @@ use Clue\React\Stdio\Stdio;
 use SSamnaniLib\Processor\BasicStringProcessor;
 use SSamnaniLib\Processor\AlternateCaseStringProcessor;
 use SSamnaniLib\Processor\UppercaseStringProcessor;
+use SSamnaniLib\Output\AbstractWriter;
+use SSamnaniLib\Processor\CSVStringProcessor;
+use SSamnaniLib\Output\FileWriter;
+
+$csvwriter = new FileWriter(__DIR__ . '/output.csv');
+$csvwriter->open();
 
 $processors = array(
     new BasicStringProcessor(),
     new AlternateCaseStringProcessor(),
-    new UppercaseStringProcessor()
+    new UppercaseStringProcessor(),
+    new CSVStringProcessor($csvwriter)
 );
 
 $loop = React\EventLoop\Factory::create();
@@ -25,6 +32,7 @@ $stdio->on('data', function ($line) use ($stdio, $processors) {
     // The basics first ;)
     if ($line === 'quit') {
         $stdio->end();
+        return;
     }
 
     foreach ($processors as $processor) {
@@ -35,3 +43,4 @@ $stdio->on('data', function ($line) use ($stdio, $processors) {
 });
 
 $loop->run();
+$csvwriter->close();
