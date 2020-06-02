@@ -1,0 +1,22 @@
+{
+    "name": "ssamnani/shehzad-string-processor-cli",
+    "description": "A cli to consume the library written at https://github.com/ssamnani/shehzad-string-processor-lib.git",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ssamnani",
+            "email": "shehzadhsamnani@gmail.com"
+        }
+    ],
+    "require": {
+        "ssamnani/shehzad-string-processor-lib": "~1.1.0",
+        "clue/stdio-react": "^2.3"
+    },
+    "repositories": {
+        "shehzad-string-processor-lib": {
+            "type": "git",
+            "url": "https://github.com/ssamnani/shehzad-string-processor-lib.git"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  package:
+    build: ./.docker
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
